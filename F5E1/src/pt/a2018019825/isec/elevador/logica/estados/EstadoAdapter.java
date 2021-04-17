@@ -1,6 +1,14 @@
 package pt.a2018019825.isec.elevador.logica.estados;
 
-public class EstadoAdapter implements IEstado {
+import pt.a2018019825.isec.elevador.logica.dados.Elevador;
+
+public abstract class EstadoAdapter implements IEstado {
+
+    protected Elevador elevador;
+
+    protected EstadoAdapter(Elevador elevador){
+        this.elevador = elevador;
+    }
 
     @Override
     public IEstado sobe() {
