@@ -1,4 +1,4 @@
-package pt.isec.a2018019825.f7;
+package pt.isec.a2018019825.f7.logica.dados;
 
 import pt.isec.a2018019825.f7.logica.TipoBola;
 
