@@ -1,7 +1,6 @@
-package bolas.logica.dados;
+package pt.isec.a2018019825.f7;
 
-
-import bolas.logica.TipoBola;
+import pt.isec.a2018019825.f7.logica.TipoBola;
 
 import java.util.ArrayList;
 import java.util.Collections;
