@@ -24,9 +24,24 @@ public class ElevadorUI {
                 case Piso2:
                     uiPiso2();
                     break;
+                case Avariado:
+                    uiAvariado();
+                    break;
             }
         }
 
+    }
+
+    private void uiAvariado() {
+        System.out.println("Avariado:");
+        switch(util.escolheOpcao("Insere chave","Sair")){
+            case 1:
+                estados.insereChave();
+                break;
+            default:
+                sair = true;
+                break;
+        }
     }
 
     private void uiPiso2() {

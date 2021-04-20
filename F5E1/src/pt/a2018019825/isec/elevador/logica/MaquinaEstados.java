@@ -28,4 +28,8 @@ public class MaquinaEstados {
     public Situacao getSituacaoAtual(){
         return atual.getSituacao();
     }
+
+    public void insereChave(){
+        atual=atual.insereChave();
+    }
 }

@@ -25,6 +25,8 @@ public class Piso1 extends EstadoAdapter {
         return new RC(elevador);
     }
 
+
+
     @Override
     public Situacao getSituacao() {
         return Situacao.Piso1;

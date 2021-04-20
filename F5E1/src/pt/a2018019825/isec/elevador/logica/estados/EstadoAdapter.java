@@ -20,5 +20,10 @@ public abstract class EstadoAdapter implements IEstado {
     public IEstado desce() {
         return this;
     }
+
+    @Override
+    public IEstado insereChave() {
+        return this;
+    }
 }
 
