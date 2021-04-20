@@ -11,6 +11,11 @@ public class RC extends EstadoAdapter {
 
     @Override
     public IEstado sobe() {
+        elevador.recorda("Vou subir");
+
+        if(Math.random() < 0.1)
+            return new Avariado(elevador,this);
+
         return new Piso1(elevador);
     }
 

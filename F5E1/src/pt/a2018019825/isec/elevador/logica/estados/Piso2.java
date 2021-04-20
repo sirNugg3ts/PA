@@ -11,6 +11,10 @@ public class Piso2 extends EstadoAdapter {
 
     @Override
     public IEstado desce() {
+        elevador.recorda("Vou descer");
+        if(Math.random()< 0.75)
+            return new Avariado(elevador,this);
+
         return new Piso1(elevador);
     }
 

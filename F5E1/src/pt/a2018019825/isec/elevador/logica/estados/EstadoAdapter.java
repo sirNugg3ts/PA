@@ -1,5 +1,6 @@
 package pt.a2018019825.isec.elevador.logica.estados;
 
+import pt.a2018019825.isec.elevador.logica.Situacao;
 import pt.a2018019825.isec.elevador.logica.dados.Elevador;
 
 public abstract class EstadoAdapter implements IEstado {
@@ -20,3 +21,4 @@ public abstract class EstadoAdapter implements IEstado {
         return this;
     }
 }
+

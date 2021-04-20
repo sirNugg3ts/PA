@@ -7,5 +7,7 @@ public interface IEstado {
 
     IEstado desce();
 
+    IEstado insereChave();
+
     Situacao getSituacao();
 }
