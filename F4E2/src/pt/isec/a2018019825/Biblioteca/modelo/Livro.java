@@ -1,8 +1,6 @@
 package pt.isec.a2018019825.Biblioteca.modelo;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 public class Livro implements Comparable<Livro>{
     private static int contador = 0;
@@ -19,6 +17,21 @@ public class Livro implements Comparable<Livro>{
         this.codigo = codigo;
         titulo = null;
         autores = null;
+    }
+
+    public Livro(Scanner sc) throws Exception {
+        String linha = sc.nextLine().trim();
+        if (linha.isEmpty())
+            throw new Exception("Livro Vazio");
+        StringTokenizer st = new StringTokenizer(linha,",;");
+        this.codigo = Integer.parseInt(st.nextToken());
+        if (this.codigo> contador)
+            contador = this.codigo;
+        this.titulo = st.nextToken();
+        this.autores = new ArrayList<>();
+        while (st.hasMoreTokens())
+            autores.add(st.nextToken());
+
     }
 
     public Livro(String titulo, List<String> autores) {

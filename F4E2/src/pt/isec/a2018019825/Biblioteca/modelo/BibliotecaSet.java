@@ -1,8 +1,9 @@
 package pt.isec.a2018019825.Biblioteca.modelo;
 
+import java.io.*;
 import java.util.*;
 
-public class BibliotecaSet implements Biblioteca {
+public class BibliotecaSet{
     private String nome;
     private Set<Livro> livros;
 
@@ -11,6 +12,47 @@ public class BibliotecaSet implements Biblioteca {
         livros = new HashSet<>();
     }
 
+    public BibliotecaSet(File file){
+        this("sem nome");
+        lerFicheiro(file);
+
+    }
+
+    void lerFicheiro(File f){
+
+            //livros.clear();
+
+        try {
+            Scanner sc = new Scanner(f);
+
+            nome = sc.nextLine();
+            while(sc.hasNextLine()){
+                Livro l = new Livro(sc);
+                livros.add(l);
+            }
+            sc.close();
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void escreveFichTxt(File f){
+
+        try {
+            FileWriter fr = new FileWriter(f);
+            fr.write(toString());
+            fr.flush();
+            fr.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
 
     public String toStringPorTitulo() {
         StringBuilder sb = new StringBuilder(String.format("Biblioteca %s:",nome));
@@ -40,7 +82,7 @@ public class BibliotecaSet implements Biblioteca {
         return sb.toString();
     }
 
-    @Override
+
     public String toString() {
         StringBuilder sb = new StringBuilder(nome);
         sb.append('\n');
@@ -51,7 +93,7 @@ public class BibliotecaSet implements Biblioteca {
         return sb.toString();
     }
 
-    @Override
+
     public int acrescentaLivro(String titulo, List<String> autores) {
         Livro novo = new Livro(titulo,autores);
         if (!livros.add(novo))
@@ -59,14 +101,14 @@ public class BibliotecaSet implements Biblioteca {
         return novo.getCodigo();
     }
 
-    @Override
+
     public int acrescentaLivro(Livro livro) {
         if (!livros.add(livro))
             return -1;
         return livro.getCodigo();
     }
 
-    @Override
+
     public Livro pesquisaLivro(int codigo) {
         //Livro base = new Livro(codigo);
         Iterator<Livro> it = livros.iterator();
@@ -84,7 +126,7 @@ public class BibliotecaSet implements Biblioteca {
         return null;
     }
 
-    @Override
+
     public boolean eliminaLivro(int codigo) {
         return livros.remove(new Livro(codigo));
     }

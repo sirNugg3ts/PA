@@ -1,18 +1,16 @@
 package pt.isec.a2018019825.Biblioteca.iu;
 
-import pt.isec.a2018019825.Biblioteca.modelo.Livro;
-import pt.isec.a2018019825.Biblioteca.modelo.LivroAntigo;
-import pt.isec.a2018019825.Biblioteca.modelo.LivroAtual;
-import  pt.isec.a2018019825.Biblioteca.modelo.Biblioteca;
+import pt.isec.a2018019825.Biblioteca.modelo.*;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class BiblioIU {
-    Biblioteca biblio;
+    BibliotecaSet biblio;
     Scanner sc;
 
-    public BiblioIU(Biblioteca biblio) {
+    public BiblioIU(BibliotecaSet biblio) {
         this.biblio = biblio;
         sc = new Scanner(System.in);
     }
@@ -115,7 +113,7 @@ public class BiblioIU {
         while (true) {
             switch (escolheOpcao("Adiciona livro","Adiciona Livro Antigo","Adiciona Livro Atual",
                     "Pesquisa Livro","Remove Livro","Listar","Listar por titulo","Listar por codigo",
-                    "Acrescentar livro repetido","Sair")) {
+                    "Acrescentar livro repetido","Sair","Gravar dados (.txt)","Ler Dados(.txt)")) {
                 case 1:
                     acrescentaLivro();
                     break;
@@ -151,6 +149,12 @@ public class BiblioIU {
                     break;
                 case 10:
                     return;
+                case 11:
+                    biblio.escreveFichTxt(new File("biblio.txt"));
+                    break;
+                case 12:
+                    biblio = new BibliotecaSet(new File("biblio.txt"));
+                    break;
             }
         }
     }
