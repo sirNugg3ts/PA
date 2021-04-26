@@ -11,22 +11,40 @@ public class EsperarAposta extends EstadoAdapter{
 
     @Override
     public IEstado aposta(int nBolas) {
+        jogo.addLog("Recebi uma aposta de " + nBolas + "\n");
         if(!jogo.aposta(nBolas))
             return this;
         TipoBola bola = jogo.tiraBolaDoSaco();
 
         if (bola == TipoBola.Branca){
+            jogo.addLog("Saiu bola branca\n");
             //ganhou
-            //retirar bolas do saco em igual numero da aposta
-            //devolverbolas da aposta
+
             //acrescentar bola branca ganha
+            jogo.ganhaBranca();
+
+            //retirar bolas do saco em igual numero da aposta
+            int nr_b=0;
+            for(int i = 0;!jogo.isSacoVazio() && i<jogo.getAposta();i++){
+                TipoBola b = jogo.tiraBolaDoSaco();
+                if(b==TipoBola.Branca){
+                    nr_b++;
+                }else{
+                    jogo.retiraPreta();
+                }
+            }
+            jogo.devolveBolas(nr_b,TipoBola.Branca);
+            //devolver bolas da aposta
+            jogo.recuperaAposta();
             //
+
             if(jogo.isSacoVazio())
                     return new FimJogo(jogo);
             return new EsperarAposta(jogo); //alternativa: return this;
         }
         //perdeu
         //
+        jogo.addLog("Saiu bola preta\n");
         jogo.perdeAposta();
         jogo.retiraPreta();
         //

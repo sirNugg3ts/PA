@@ -4,6 +4,8 @@ import pt.isec.a2018019825.f7.logica.dados.Jogo;
 import pt.isec.a2018019825.f7.logica.estados.IEstado;
 import pt.isec.a2018019825.f7.logica.estados.Inicio;
 
+import java.util.List;
+
 public class MaquinaEstados {
 
     IEstado atual;
@@ -37,7 +39,7 @@ public class MaquinaEstados {
     }
 
     //da instancia da classe de dados (Jogo) so disponibilizamos gets!
-    public int getNrBolasBrancas(){
+    public int getNrBolasBrancasGanhas(){
         return jogo.getNrBolasBrancasGanhas();
     }
 
@@ -50,5 +52,13 @@ public class MaquinaEstados {
         return jogo;
     }
  */
+
+    public List<String> getLog(){
+        return jogo.getLog();
+    }
+
+    public void clearLog(){
+        jogo.clearLog();
+    }
 
 }

@@ -12,4 +12,10 @@ public class FimJogo extends EstadoAdapter{
     public Situacao getSituacao() {
         return Situacao.FimJogo;
     }
+
+    @Override
+    public IEstado comeca() {
+        jogo.iniciaJogo();
+        return new EsperarAposta(jogo);
+    }
 }

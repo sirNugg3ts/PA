@@ -4,6 +4,7 @@ import pt.isec.a2018019825.f7.logica.TipoBola;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 public class Jogo {
     public static final int NRBRANCAS = 10;
@@ -12,6 +13,23 @@ public class Jogo {
     int nrBolasBrancasGanhas,nrBolasPretasFora,nrBolasBrancasFora;
     int aposta;
 
+    // ---- Logs -----
+
+    ArrayList<String> log = new ArrayList<>();
+
+    public void addLog(String str){
+        log.add(str);
+    }
+
+    public List<String> getLog(){
+        return log;
+    }
+
+    public void clearLog(){
+        log.clear();
+    }
+
+    //---------------------------
     public Jogo() {
         iniciaJogo();
     }

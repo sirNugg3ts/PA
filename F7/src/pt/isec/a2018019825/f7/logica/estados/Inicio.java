@@ -12,6 +12,7 @@ public class Inicio extends EstadoAdapter{
     @Override
     public IEstado comeca() {
         jogo.iniciaJogo();
+        jogo.addLog("Vou iniciar jogo\n");
         return new EsperarAposta(jogo);
     }
 
