@@ -1,7 +1,7 @@
-package pt.isec.a2018019825.F6.sequencias.iu.texto;
+package sequencias.iu.texto;
 
-import pt.isec.a2018019825.F6.sequencias.logica.JogoMaqEstados;
-import pt.isec.a2018019825.F6.sequencias.logica.Situacao;
+import sequencias.logica.JogoMaqEstados;
+import sequencias.logica.Situacao;
 
 import java.util.Scanner;
 

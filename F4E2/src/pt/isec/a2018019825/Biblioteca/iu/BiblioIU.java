@@ -113,7 +113,7 @@ public class BiblioIU {
         while (true) {
             switch (escolheOpcao("Adiciona livro","Adiciona Livro Antigo","Adiciona Livro Atual",
                     "Pesquisa Livro","Remove Livro","Listar","Listar por titulo","Listar por codigo",
-                    "Acrescentar livro repetido","Sair","Gravar dados (.txt)","Ler Dados(.txt)")) {
+                    "Acrescentar livro repetido","Sair","Gravar dados (.txt)","Ler Dados(.txt)","Gravar(Serial)","Ler(Serial)")) {
                 case 1:
                     acrescentaLivro();
                     break;
@@ -154,6 +154,13 @@ public class BiblioIU {
                     break;
                 case 12:
                     biblio = new BibliotecaSet(new File("biblio.txt"));
+                    break;
+                case 13:
+                    biblio.gravar();
+                    break;
+                case 14:
+                    //biblio.ler();
+                    biblio = BibliotecaSet.lerGenerico();
                     break;
             }
         }

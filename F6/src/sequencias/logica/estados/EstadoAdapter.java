@@ -1,7 +1,9 @@
-package pt.isec.a2018019825.F6.sequencias.logica.estados;
+package sequencias.logica.estados;
 
 
-import pt.isec.a2018019825.F6.sequencias.logica.dados.JogoDados;
+import sequencias.logica.dados.JogoDados;
+
+import java.io.Serializable;
 
 public abstract class EstadoAdapter implements IEstado {
     protected JogoDados jogoDados;

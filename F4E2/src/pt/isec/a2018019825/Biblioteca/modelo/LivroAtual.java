@@ -3,6 +3,7 @@ package pt.isec.a2018019825.Biblioteca.modelo;
 import java.util.List;
 
 public class LivroAtual extends Livro {
+    private static final long serialVersionUID = 1L;
     String ISBN;
     float preco;
 

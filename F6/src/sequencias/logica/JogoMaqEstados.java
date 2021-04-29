@@ -1,8 +1,8 @@
-package pt.isec.a2018019825.F6.sequencias.logica;
+package sequencias.logica;
 
 
-import pt.isec.a2018019825.F6.sequencias.logica.dados.JogoDados;
-import pt.isec.a2018019825.F6.sequencias.logica.estados.IEstado;
+import sequencias.logica.dados.JogoDados;
+import sequencias.logica.estados.IEstado;
 
 public class JogoMaqEstados {
 

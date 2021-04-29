@@ -1,6 +1,8 @@
-package pt.isec.a2018019825.F6.sequencias.logica.dados;
+package sequencias.logica.dados;
 
+import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class JogoDados {
@@ -37,7 +39,7 @@ public class JogoDados {
     }
 
     //recolhe o dado correspondente a indice para relancar
-    // ou para formar pt.isec.a2018019825.F6.sequencias (o dado passa para a mao)
+    // ou para formar sequencias (o dado passa para a mao)
     public void recolheDado(int indice) {
     }
 

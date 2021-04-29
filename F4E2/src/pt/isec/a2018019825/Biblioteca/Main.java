@@ -31,6 +31,10 @@ public class Main {
             DataInputStream dis = new DataInputStream(fis);
             DataOutputStream dos = new DataOutputStream(fos);
 
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+
+
             //text
             Writer wr;
             Reader re;

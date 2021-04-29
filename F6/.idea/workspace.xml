@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5db97c5c-b4c5-4aab-b855-264ecf794c30" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../F4E2/src/pt/isec/a2018019825/Biblioteca/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../F4E2/src/pt/isec/a2018019825/Biblioteca/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../F4E2/src/pt/isec/a2018019825/Biblioteca/iu/BiblioIU.java" beforeDir="false" afterPath="$PROJECT_DIR$/../F4E2/src/pt/isec/a2018019825/Biblioteca/iu/BiblioIU.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../F4E2/src/pt/isec/a2018019825/Biblioteca/modelo/BibliotecaSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../F4E2/src/pt/isec/a2018019825/Biblioteca/modelo/BibliotecaSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../F4E2/src/pt/isec/a2018019825/Biblioteca/modelo/Livro.java" beforeDir="false" afterPath="$PROJECT_DIR$/../F4E2/src/pt/isec/a2018019825/Biblioteca/modelo/Livro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../F4E2/src/pt/isec/a2018019825/Biblioteca/modelo/LivroAntigo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../F4E2/src/pt/isec/a2018019825/Biblioteca/modelo/LivroAntigo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../F4E2/src/pt/isec/a2018019825/Biblioteca/modelo/LivroAtual.java" beforeDir="false" afterPath="$PROJECT_DIR$/../F4E2/src/pt/isec/a2018019825/Biblioteca/modelo/LivroAtual.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/discord.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SequenciaDadosBaseAlunos/__MACOSX/._sequencias" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SequenciaDadosBaseAlunos/__MACOSX/sequencias/._.DS_Store" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SequenciaDadosBaseAlunos/__MACOSX/sequencias/._Principal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SequenciaDadosBaseAlunos/__MACOSX/sequencias/._iu" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SequenciaDadosBaseAlunos/__MACOSX/sequencias/._logica" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SequenciaDadosBaseAlunos/__MACOSX/sequencias/iu/._.DS_Store" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SequenciaDadosBaseAlunos/__MACOSX/sequencias/iu/._texto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SequenciaDadosBaseAlunos/__MACOSX/sequencias/iu/texto/._IUtexto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SequenciaDadosBaseAlunos/__MACOSX/sequencias/logica/._.DS_Store" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SequenciaDadosBaseAlunos/__MACOSX/sequencias/logica/._JogoMaqEstados.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SequenciaDadosBaseAlunos/__MACOSX/sequencias/logica/._Situacao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SequenciaDadosBaseAlunos/__MACOSX/sequencias/logica/._dados" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SequenciaDadosBaseAlunos/__MACOSX/sequencias/logica/._estados" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SequenciaDadosBaseAlunos/__MACOSX/sequencias/logica/dados/._Dado.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SequenciaDadosBaseAlunos/__MACOSX/sequencias/logica/dados/._JogoDados.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SequenciaDadosBaseAlunos/__MACOSX/sequencias/logica/estados/._EstadoAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SequenciaDadosBaseAlunos/__MACOSX/sequencias/logica/estados/._IEstado.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pt/isec/a2018019825/F6/sequencias/Principal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pt/isec/a2018019825/F6/sequencias/iu/texto/IUtexto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pt/isec/a2018019825/F6/sequencias/logica/JogoMaqEstados.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pt/isec/a2018019825/F6/sequencias/logica/Situacao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pt/isec/a2018019825/F6/sequencias/logica/dados/Dado.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pt/isec/a2018019825/F6/sequencias/logica/dados/JogoDados.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pt/isec/a2018019825/F6/sequencias/logica/estados/EstadoAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pt/isec/a2018019825/F6/sequencias/logica/estados/IEstado.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1rqXVdNxnXNHDjga5QRsvhPRiIV" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5db97c5c-b4c5-4aab-b855-264ecf794c30" name="Default Changelist" comment="" />
+      <created>1619704618758</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1619704618758</updated>
+      <workItem from="1619704619909" duration="535000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

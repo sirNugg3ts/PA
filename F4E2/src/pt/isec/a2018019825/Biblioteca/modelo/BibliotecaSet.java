@@ -3,7 +3,8 @@ package pt.isec.a2018019825.Biblioteca.modelo;
 import java.io.*;
 import java.util.*;
 
-public class BibliotecaSet{
+public class BibliotecaSet implements Serializable{
+    private static final long serialVersionUID = 1L;
     private String nome;
     private Set<Livro> livros;
 
@@ -129,6 +130,52 @@ public class BibliotecaSet{
 
     public boolean eliminaLivro(int codigo) {
         return livros.remove(new Livro(codigo));
+    }
+
+    private static final String FILENAME = "biblio.dat";
+
+    public boolean gravar(){
+
+        try {
+            ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(FILENAME));
+            //oos.writeObject(nome);
+            //oos.writeObject(livros);
+
+            oos.writeObject(this);
+            oos.close();
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    public static BibliotecaSet lerGenerico(){
+        try {
+            ObjectInputStream ois = new ObjectInputStream(new FileInputStream(FILENAME));
+
+            BibliotecaSet obj = (BibliotecaSet) ois.readObject();
+
+            ois.close();
+
+            for (Livro l : obj.livros)
+                l.verificaContador();
+
+            return obj;
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public boolean ler(){
+        BibliotecaSet obj = BibliotecaSet.lerGenerico();
+        if (obj != null){
+            this.nome = obj.nome;
+            this.livros = obj.livros;
+            return true;
+        }
+        return false;
     }
 
 

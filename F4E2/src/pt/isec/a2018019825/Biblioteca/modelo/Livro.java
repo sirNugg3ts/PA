@@ -1,9 +1,16 @@
 package pt.isec.a2018019825.Biblioteca.modelo;
 
+import java.io.Serializable;
 import java.util.*;
 
-public class Livro implements Comparable<Livro>{
+public class Livro implements Comparable<Livro>, Serializable {
+    private static final long serialVersionUID = 1L;
     private static int contador = 0;
+
+    public void verificaContador(){
+        if (codigo > contador)
+            contador=codigo;
+    }
 
     private static int geraCodigo() {
         return ++contador;
@@ -13,13 +20,17 @@ public class Livro implements Comparable<Livro>{
     private String titulo;
     private List<String> autores;
 
+    private transient int n_vezes = 10;
+
     public Livro(int codigo) {
         this.codigo = codigo;
         titulo = null;
         autores = null;
+        n_vezes = 20;
     }
 
     public Livro(Scanner sc) throws Exception {
+        n_vezes = 30;
         String linha = sc.nextLine().trim();
         if (linha.isEmpty())
             throw new Exception("Livro Vazio");
@@ -35,6 +46,7 @@ public class Livro implements Comparable<Livro>{
     }
 
     public Livro(String titulo, List<String> autores) {
+        n_vezes = 40;
         this.codigo = geraCodigo();
         this.titulo = titulo;
         this.autores = new ArrayList<>(autores);
@@ -57,6 +69,7 @@ public class Livro implements Comparable<Livro>{
         StringBuilder sb = new StringBuilder(String.format("%d,%s",codigo,titulo));
         for(String a : autores)
             sb.append(String.format(",%s",a));
+        sb.append(",#"+(++n_vezes));
         return sb.toString();
     }
 
@@ -102,6 +115,8 @@ public class Livro implements Comparable<Livro>{
             return Integer.valueOf(o1.getCodigo()).compareTo(o2.getCodigo());
         }
     }
+
+
 
 }
 

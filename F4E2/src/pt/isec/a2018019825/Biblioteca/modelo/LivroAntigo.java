@@ -3,6 +3,7 @@ package pt.isec.a2018019825.Biblioteca.modelo;
 import java.util.List;
 
 public class LivroAntigo extends Livro {
+    private static final long serialVersionUID = 1L;
     int nrCopias;
 
     public LivroAntigo(String titulo, List<String> autores, int copias) {

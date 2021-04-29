@@ -1,4 +1,4 @@
-package pt.isec.a2018019825.F6.sequencias.logica.dados;
+package sequencias.logica.dados;
 
 public class Dado {
     private int valor = 0;
