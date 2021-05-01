@@ -3,5 +3,5 @@ package sequencias.logica;
 import java.io.Serializable;
 
 public enum Situacao  {
-    ESTADO1, ESTADO2, ESTADOZ
+    AGUARDA_INICIO, AGUARDA_RELANCAMENTO, AVALIAR_SEQUENCIA
 }
