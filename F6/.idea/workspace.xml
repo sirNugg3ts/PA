@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5db97c5c-b4c5-4aab-b855-264ecf794c30" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/sequencias/logica/estados/AguardaInicio.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sequencias/logica/estados/AguardaRelancamento.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sequencias/logica/estados/AguardaSequencia.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sequencias/logica/Situacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sequencias/logica/Situacao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sequencias/logica/estados/EstadoAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sequencias/logica/estados/EstadoAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sequencias/logica/estados/IEstado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sequencias/logica/estados/IEstado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sequencias/logica/JogoMaqEstados.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sequencias/logica/JogoMaqEstados.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sequencias/logica/estados/AguardaInicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sequencias/logica/estados/AguardaInicio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sequencias/logica/estados/AguardaRelancamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sequencias/logica/estados/AguardaRelancamento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sequencias/logica/estados/AguardaSequencia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sequencias/logica/estados/AguardaSequencia.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +39,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -59,6 +57,9 @@
       <workItem from="1619704619909" duration="1230000" />
       <workItem from="1619791299241" duration="7217000" />
       <workItem from="1619876872887" duration="598000" />
+      <workItem from="1619993666990" duration="1231000" />
+      <workItem from="1619994915118" duration="1712000" />
+      <workItem from="1620038900177" duration="3576000" />
     </task>
     <servers />
   </component>

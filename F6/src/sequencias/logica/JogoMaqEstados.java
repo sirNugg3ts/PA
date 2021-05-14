@@ -1,7 +1,7 @@
 package sequencias.logica;
 
-
 import sequencias.logica.dados.JogoDados;
+import sequencias.logica.estados.AguardaInicio;
 import sequencias.logica.estados.IEstado;
 
 public class JogoMaqEstados {
@@ -11,7 +11,7 @@ public class JogoMaqEstados {
 
     public JogoMaqEstados() {
         jogoDados = new JogoDados();
-        //estado = ...
+        estado = new AguardaInicio(jogoDados);
     }
 
     //  metodos que consultam
@@ -30,6 +30,20 @@ public class JogoMaqEstados {
     }
 
     // acoes delegadas no estado
-
+    void comecar(){
+        setEstado(estado.comecar());
+    }
+    void recolher(int indice){
+        setEstado(estado.recolher(indice));
+    }
+    void relancar(){
+        setEstado(estado.relancar());
+    }
+    void avaliar(){
+        setEstado(estado.avaliar());
+    }
+    void terminar(){
+        setEstado(estado.terminar());
+    }
 
 }

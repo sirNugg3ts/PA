@@ -5,8 +5,15 @@ import sequencias.logica.dados.JogoDados;
 
 public class AguardaInicio extends EstadoAdapter{
 
-    protected AguardaInicio(JogoDados j) {
+    public AguardaInicio(JogoDados j) {
         super(j);
+    }
+
+    @Override
+    public IEstado comecar() {
+        jogoDados.inicia();
+        jogoDados.lancaDados();
+        return new AguardaRelancamento(jogoDados);
     }
 
     @Override
