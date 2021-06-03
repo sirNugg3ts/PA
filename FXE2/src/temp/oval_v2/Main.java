@@ -1,10 +1,11 @@
-package oval;
+package temp.oval_v2;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import oval.iu.RootPane;
-import oval.logica.Figura;
+import temp.oval_v2.iu.RootPane;
+import temp.oval_v2.logica.Desenho;
+import temp.oval_v2.logica.Figura;
 
 public class Main extends Application {
     public static void main(String[] args) {
@@ -13,8 +14,8 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Figura figura = new Figura();
-        RootPane root = new RootPane(figura);
+        Desenho desenho = new Desenho();
+        RootPane root = new RootPane(desenho);
         Scene scene = new Scene(root,800,600);
         stage.setScene(scene);
         stage.setTitle("Ex2");

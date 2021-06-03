@@ -1,61 +1,107 @@
-package oval.iu;
+package temp.oval_v2.iu;
 
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.Pane;
+import com.sun.javafx.iio.gif.GIFImageLoaderFactory;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.control.Button;
+import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Ellipse;
-import oval.logica.Figura;
+import javafx.scene.shape.Line;
+import temp.oval_v2.logica.Desenho;
 
 
-public class RootPane extends Pane {
-    Ellipse ellipse;
 
-    Figura figura;
+public class RootPane extends BorderPane {
 
-    public RootPane(Figura figura){
-        this.figura = figura;
+    Desenho desenho;
+    AreaDesenho areaDesenho = new AreaDesenho(desenho);
+    HBox toolBar;
+    Button btnApagaUltimo,btnApagaTudo;
+    Button btnRed,btnGreen,btnBlue,btnRandom;
+
+    public RootPane(Desenho desenho){
+        this.desenho = desenho;
       criaLayout();
       registaListeners();
+      atualiza();
+    }
+
+    private void atualiza() {
+        areaDesenho.atualiza();
+    }
+
+    ChangeListener procSize = new ChangeListener() {
+        @Override
+        public void changed(ObservableValue observableValue, Object o, Object t1) {
+            areaDesenho.alteraDimensoes(RootPane.this.getWidth(),RootPane.this.getHeight());
+
+        }
+    };
+
+    private void registaListeners() {
+        widthProperty().addListener(procSize);
+        heightProperty().addListener(procSize);
+        areaDesenho.registaListeners();
+        btnApagaUltimo.setOnAction(e -> {
+            desenho.apagaUltima();
+            areaDesenho.atualiza();
+        });
+        btnApagaTudo.setOnAction(e -> {
+            desenho.apagaTudo();
+            areaDesenho.atualiza();
+        });
+
+        btnRed.setOnAction(e -> {desenho.setRGB(1,0,0);atualizaBotaoAtivo();});
+        btnBlue.setOnAction(e -> {desenho.setRGB(0,0,1);atualizaBotaoAtivo();});
+        btnGreen.setOnAction(e -> {desenho.setRGB(0,1,0);atualizaBotaoAtivo();});
+        btnRandom.setOnAction(e -> {desenho.setRGB(Math.random(),Math.random(),Math.random());atualizaBotaoAtivo();});
+
+
+    }
+
+    void atualizaBotaoAtivo(){
+        Border border = new Border(new BorderStroke(Color.BLACK,BorderStrokeStyle.SOLID,CornerRadii.EMPTY,BorderWidths.DEFAULT));
+        double r = desenho.getR();
+        double g = desenho.getG();
+        double b = desenho.getB();
+        btnRed.setBorder(r > 0 && g==0 && b == 0 ? border : null);
+        btnGreen.setBorder(g > 0 && r==0 && b == 0 ? border : null);
+        btnBlue.setBorder(b > 0 && r==0 && g == 0 ? border : null);
+        btnRandom.setBorder(r * g != 0 || r*b != 0 || g*b!=0 ? border : null);
     }
 
     void criaLayout(){
-        ellipse = new Ellipse(100,100,80,50);
-        ellipse.setFill(Color.GREEN);
-        this.getChildren().add(ellipse);
+        toolBar = new HBox();
+        btnApagaTudo = new Button("Apaga tudo");
+        btnApagaUltimo = new Button("Apaga Ultimo");
+
+        btnBlue = new Button();
+        btnRed = new Button();
+        btnGreen = new Button();
+        btnRandom = new Button("?");
+
+        btnRed.setBackground(new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY)));
+        btnBlue.setBackground(new Background(new BackgroundFill(Color.BLUE, CornerRadii.EMPTY, Insets.EMPTY)));
+        btnGreen.setBackground(new Background(new BackgroundFill(Color.GREEN, CornerRadii.EMPTY, Insets.EMPTY)));
+
+        btnRed.setPrefSize(30,30);
+        btnBlue.setPrefSize(30,30);
+        btnGreen.setPrefSize(30,30);
+        btnRandom.setPrefSize(30,30);
+
+
+        toolBar.getChildren().addAll(btnRed,btnGreen,btnBlue,btnRandom,new Line(0,0,0,30),btnApagaUltimo,btnApagaTudo);
+        toolBar.setAlignment(Pos.CENTER);
+        toolBar.setSpacing(5);
+        toolBar.setPadding(new Insets(10));
+        this.setTop(toolBar);
+
+      areaDesenho = new AreaDesenho(desenho);
+      this.setCenter(areaDesenho);
     }
 
-    void registaListeners(){
-        this.addEventHandler(MouseEvent.MOUSE_PRESSED, (e) -> {
-            figura.setP1(e.getX(),e.getY());
-            figura.setP2(e.getX(),e.getY());
-            figura.setRGB(Math.random(),Math.random(),Math.random());
-
-            atualiza();
-        });
-        this.setOnMouseReleased(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent mouseEvent) {
-                figura.setP2(mouseEvent.getX(),mouseEvent.getY());
-                atualiza();
-            }
-        });
-
-        this.setOnMouseDragged((e) -> {
-            figura.setP2(e.getX(),e.getY());
-            atualiza();
-        });
-    }
-
-    void atualiza(){
-        if (ellipse == null || figura == null) return;
-        ellipse.setCenterX(figura.getCX());
-        ellipse.setCenterY(figura.getCY());
-        ellipse.setRadiusX(figura.getLargura()/2);
-        ellipse.setRadiusY(figura.getAltura()/2);
-        ellipse.setFill(Color.color(figura.getR(),figura.getG(),figura.getB()));
-
-    }
 
 }
+

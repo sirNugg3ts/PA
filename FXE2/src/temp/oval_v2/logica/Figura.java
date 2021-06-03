@@ -1,4 +1,4 @@
-package oval.logica;
+package temp.oval_v2.logica;
 
 public class Figura {
     double x1,y1;
@@ -6,11 +6,11 @@ public class Figura {
     double r,g,b;
 
     public double getX1() {
-        return x1;
+        return x1 < x2 ? x1 : x2;
     }
 
     public double getY1() {
-        return y1;
+        return y1 < y2 ? y1 : y2;
     }
 
     public double getX2() {
