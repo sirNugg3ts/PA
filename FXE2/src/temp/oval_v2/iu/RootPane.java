@@ -1,6 +1,5 @@
 package temp.oval_v2.iu;
 
-import com.sun.javafx.iio.gif.GIFImageLoaderFactory;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.geometry.Insets;
@@ -78,18 +77,14 @@ public class RootPane extends BorderPane {
         btnApagaUltimo = new Button("Apaga Ultimo");
 
         btnBlue = new Button();
-        btnRed = new Button();
-        btnGreen = new Button();
-        btnRandom = new Button("?");
+        btnRed  = new Button();
+        btnGreen  = new Button();
+        btnRandom  = new Button("?");
 
         btnRed.setBackground(new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY)));
         btnBlue.setBackground(new Background(new BackgroundFill(Color.BLUE, CornerRadii.EMPTY, Insets.EMPTY)));
         btnGreen.setBackground(new Background(new BackgroundFill(Color.GREEN, CornerRadii.EMPTY, Insets.EMPTY)));
 
-        btnRed.setPrefSize(30,30);
-        btnBlue.setPrefSize(30,30);
-        btnGreen.setPrefSize(30,30);
-        btnRandom.setPrefSize(30,30);
 
 
         toolBar.getChildren().addAll(btnRed,btnGreen,btnBlue,btnRandom,new Line(0,0,0,30),btnApagaUltimo,btnApagaTudo);
