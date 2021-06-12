@@ -23,11 +23,27 @@ public class Main extends Application {
         stage.show();
 
         Stage stage2 = new Stage();
-        Scene scene2 = new Scene();
+        RootPane2 root2 = new RootPane2(desenho);
+        Scene scene2 = new Scene(root2,800,600);
+        stage2.setScene(scene2);
+        stage2.setTitle("Janela 2");
+        stage2.show();
     }
 }
 
 class RootPane2 extends Pane {
+    DesenhoObs desenho;
+    public RootPane2(DesenhoObs desenho) {
+        this.desenho = desenho;
+        createLayout();
+        registaListeners();
+    }
 
+    private void createLayout() {
+    }
+
+    private void registaListeners(){
+
+    }
 }
 
